@@ -1,0 +1,39 @@
+{
+  "name": "soundcloud-widget",
+  "version": "1.0.0",
+  "description": "A desktop widget for SoundCloud",
+  "main": "main.js",
+  "scripts": {
+    "dev": "NODE_ENV=development concurrently \"vite\" \"electron .\"",
+    "build": "vite build",
+    "start": "electron .",
+    "package": "electron-builder"
+  },
+  "keywords": ["soundcloud", "widget", "electron"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^28.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "concurrently": "^8.2.2",
+    "electron-builder": "^24.9.1",
+    "vite": "^5.0.0"
+  },
+  "build": {
+    "appId": "com.soundcloud.widget",
+    "productName": "SoundCloud Widget",
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "preload.js"
+    ],
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "category": "Audio"
+    }
+  }
+}
