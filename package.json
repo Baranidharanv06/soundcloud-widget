@@ -36,7 +36,11 @@
     "directories": {
       "output": "release"
     },
-
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "category": "Audio",
+      "maintainer": "your-email@example.com",
+      "executableName": "soundcloud-widget"
     }
   }
 }
